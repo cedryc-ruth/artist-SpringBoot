@@ -19,23 +19,19 @@ public class ArtistService {
 		return artists;
 	}
 	
-	public Artist getArtist(String id) {
-		int indice = Integer.parseInt(id);
-		
-		return artistRepository.findById(indice);
+	public Artist getArtist(long id) {
+		return artistRepository.findById(id);
 	}
  
 	public void addArtist(Artist artist) {
 		artistRepository.save(artist);
 	}
  
-	public void updateArtist(String id, Artist artist) {
+	public void updateArtist(long id, Artist artist) {
 		artistRepository.save(artist);
 	}
  
-	public void deleteArtist(String id) {
-		Long indice = (long) Integer.parseInt(id);
-		
-		artistRepository.deleteById(indice);
+	public void deleteArtist(long id) {
+		artistRepository.deleteById(id);
 	}
 }
