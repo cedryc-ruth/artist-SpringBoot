@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @Table(name="artists")
 public class Artist {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	@NotEmpty(message="The firstname must not be empty.")
